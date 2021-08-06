@@ -12,6 +12,7 @@ const STARS = [
     "star-04px-white",
     "star-04px-yellow",
 ]
+let starsCount = 0;
 
 //getRandomInt() has been copied from devstudioonline.com
 function getRandomInt(min, max) {
@@ -34,13 +35,14 @@ function RenderRandomStar() {
     const thisSize = getRandomSize();
     return (
         <img 
+            key={starsCount++}
             className={"background-star"}
             src={"stars/" + thisSrc + 
             ".png"}
             alt="A randomly-generated background star"
             style={{
-                top: (Math.random() * window.screen.availHeight),
-                left: (Math.random() * window.screen.availWidth),
+                top: (Math.random() * window.screen.availHeight * .95),
+                left: (Math.random() * window.screen.availWidth * .95),
                 transform: `rotate(${Math.random() * 90}deg)`,
                 height: thisSize,
                 width: thisSize
