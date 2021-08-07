@@ -69,7 +69,7 @@ html,body {
     animation: Planemo-spin infinite 20s linear;
   }
   .planemo:hover {
-    animation: Planemo-hover infinite 1s linear;
+    animation: Planemo-hover infinite 2s ease-in-out;
   }
 }
 @keyframes Planemo-spin {
