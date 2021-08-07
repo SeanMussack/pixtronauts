@@ -12,6 +12,8 @@ const STARS = [
     "star-04px-white",
     "star-04px-yellow",
 ]
+const STARS_DENSITY = 35;
+
 let starsCount = 0;
 
 //getRandomInt() has been copied from devstudioonline.com
@@ -19,6 +21,13 @@ function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function GetNumStarsNeeded() {
+    const screenHeight = window.screen.availHeight;
+    const screenWidth = window.screen.availWidth;
+    const starsNeeded = (((screenHeight * screenWidth) / 1000000) * STARS_DENSITY);
+    return starsNeeded;
 }
 
 function RenderRandomStar() {
@@ -41,8 +50,8 @@ function RenderRandomStar() {
             ".png"}
             alt="A randomly-generated background star"
             style={{
-                top: (Math.random() * window.screen.availHeight * .95),
-                left: (Math.random() * window.screen.availWidth * .95),
+                top: (((Math.random() * 1.2) - 0.1) * window.screen.availHeight),
+                left: (((Math.random() * 1.2) - 0.1) * window.screen.availWidth),
                 transform: `rotate(${Math.random() * 90}deg)`,
                 height: thisSize,
                 width: thisSize
@@ -62,21 +71,21 @@ function RenderRandomStars(numStars) {
 function RenderDistantStars() {
     return (
         <div className="background-stars-distant">
-            {RenderRandomStars(20)}
+            {RenderRandomStars(GetNumStarsNeeded())}
         </div>
     );
 }
 function RenderMediumStars() {
     return (
         <div className="background-stars-medium">
-            {RenderRandomStars(20)}
+            {RenderRandomStars(GetNumStarsNeeded())}
         </div>
     );
 }
 function RenderNearbyStars() {
     return (
         <div className="background-stars-nearby">
-            {RenderRandomStars(20)}
+            {RenderRandomStars(GetNumStarsNeeded())}
         </div>
     );
 }
