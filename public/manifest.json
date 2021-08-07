@@ -1,22 +1,12 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Pixtronauts",
+  "name": "Pixtronauts: Explore the Pixel Universe",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "planemo-16px-neptune.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
-    {
-      "src": "logo192.png",
-      "type": "image/png",
-      "sizes": "192x192"
-    },
-    {
-      "src": "logo512.png",
-      "type": "image/png",
-      "sizes": "512x512"
-    }
   ],
   "start_url": ".",
   "display": "standalone",
