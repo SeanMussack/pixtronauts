@@ -36,10 +36,19 @@ export const PLANEMOS = [
         top: "33vh",
     },
     {
+        id: 5,
+        name: "Jupiter",
+        image: "/planemos/planemo-24px-jupiter.png",
+        desc: "A very large gas giant",
+        height: 120,
+        left: "20vw",
+        top: "66vh"
+    },
+    {
         id: 6,
         name: "Saturn",
         image: "/planemos/planemo-20px-saturn.png",
-        desc: "A large gas giant",
+        desc: "A large gas giant with rings",
         height: 100,
         left: "40vw",
         top: "66vh",
